@@ -1,7 +1,7 @@
 """djangoecommerce URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/dev/topics/http/urls/
+    https://docs.djangoproject.com/en/1.9/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,14 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-
 from core import views
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
-    url(r'^produto/$', views.produto, name="produto"),
-    url(r'^produtos/$', views.produtos, name="produtos"),
-    url(r'^contato/$', views.contato, name="contato"),
+    url(r'^$', views.index, name='index'),
+    url(r'^contato/$', views.contact, name='contact'),
+    url(r'^produto/$', views.product, name='product'),
+    url(r'^produtos/$', views.product_list, name='product_list'),
     url(r'^admin/', admin.site.urls),
-
 ]
